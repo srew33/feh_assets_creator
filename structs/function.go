@@ -195,7 +195,7 @@ func compress(file fs.DirEntry, src string, rel string, zw *zip.Writer) error {
 			relName := filepath.Join(rel, e.Name())
 			absName := filepath.Join(src, e.Name())
 			// fmt.Println(relName)
-			info, err := file.Info()
+			info, err := e.Info()
 			if err != nil {
 				return err
 			}
